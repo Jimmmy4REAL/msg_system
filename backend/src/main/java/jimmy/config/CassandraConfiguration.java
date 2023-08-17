@@ -26,7 +26,6 @@ public class CassandraConfiguration {
 
     @Value("${spring.cassandra.keyspace}")
     private String keyspace;
-    // direct copy
     @Bean
     public Cluster cassandraCluster() {
         return new Cluster.Builder().addContactPointsWithPorts(
